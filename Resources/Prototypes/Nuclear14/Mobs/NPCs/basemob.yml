@@ -1,4 +1,4 @@
-﻿# Wave Defence Base Hostile
+﻿# Wave Defense Base Hostile
 - type: entity
   name: wave attacker
   abstract: true

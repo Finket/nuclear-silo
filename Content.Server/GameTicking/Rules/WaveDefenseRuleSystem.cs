@@ -104,9 +104,9 @@ public sealed class WaveDefenseRuleSystem : GameRuleSystem<WaveDefenseRuleCompon
         {
             if (!GameTicker.IsGameRuleAdded(uid, gameRule))
                 return;
-            ev.AddLine(Loc.GetString("wave-defence-end-text", ("number", WaveNumber), ("kills", KillCount),
+            ev.AddLine(Loc.GetString("wave-defense-end-text", ("number", WaveNumber), ("kills", KillCount),
                 ("score", HighScore)));
-            ev.AddLine(Loc.GetString("wave-defence-participants"));
+            ev.AddLine(Loc.GetString("wave-defense-participants"));
             foreach (var player in Defenders)
             {
                 ev.AddLine(player);
@@ -143,7 +143,7 @@ public sealed class WaveDefenseRuleSystem : GameRuleSystem<WaveDefenseRuleCompon
 
     private void SpawnWave(int wave)
     {
-        _chatManager.DispatchServerAnnouncement(Loc.GetString("wave-defence-new-wave", ("number", wave)));
+        _chatManager.DispatchServerAnnouncement(Loc.GetString("wave-defense-new-wave", ("number", wave)));
 
         var spawns = new List<EntityCoordinates>();
         foreach (var (_, meta, xform) in EntityQuery<SpawnPointComponent, MetaDataComponent, TransformComponent>(true))
