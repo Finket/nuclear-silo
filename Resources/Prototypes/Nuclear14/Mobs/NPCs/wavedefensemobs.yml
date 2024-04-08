@@ -1,0 +1,20 @@
+﻿# Wave Defense Mobs
+# Ordered by difficulty
+# Animals
+
+- type: entity
+  parent: [ MobAngryBee, N14MobWaveAnimal ]
+  id: MobAngryBeeWave
+  suffix: WaveMode
+  components:
+  - type: WaveMob
+    difficulty: 1
+
+- type: entity
+  parent: [ MobGlockroach, N14MobWaveAnimal ]
+  id: MobGlockroachWaveBoss
+  suffix: WaveMode
+  components:
+  - type: WaveMob
+    difficulty: 3
+    unique: true
