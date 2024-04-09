@@ -296,6 +296,10 @@ public sealed class NPCUtilitySystem : EntitySystem
             {
                 var radius = blackboard.GetValueOrDefault<float>(NPCBlackboard.VisionRadius, EntityManager);
 
+                // CalderaSite - All potential targets are in LOS if NPC has ESP
+                if (blackboard.GetValueOrDefault<bool>("ESP", EntityManager))
+                    return 1f;
+
                 return ExamineSystemShared.InRangeUnOccluded(owner, targetUid, radius + 0.5f, null) ? 1f : 0f;
             }
             case TargetInLOSOrCurrentCon:
@@ -312,6 +316,10 @@ public sealed class NPCUtilitySystem : EntitySystem
                 {
                     return 1f;
                 }
+
+                // CalderaSite - All potential targets are in LOS if NPC has ESP
+                if (blackboard.GetValueOrDefault<bool>("ESP", EntityManager))
+                    return 1f;
 
                 return ExamineSystemShared.InRangeUnOccluded(owner, targetUid, radius + bufferRange, null) ? 1f : 0f;
             }

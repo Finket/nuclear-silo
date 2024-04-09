@@ -34,6 +34,7 @@ public sealed partial class NPCBlackboard : IEnumerable<KeyValuePair<string, obj
         {"RangedRange", 10f},
         {"RotateSpeed", float.MaxValue},
         {"VisionRadius", 10f},
+        {"ESP", false}, // CalderaSite - Gives NPCs wallhacks so they can chase players
     };
 
     /// <summary>
@@ -290,6 +291,11 @@ public sealed partial class NPCBlackboard : IEnumerable<KeyValuePair<string, obj
     public const string Owner = "Owner";
     public const string OwnerCoordinates = "OwnerCoordinates";
     public const string MovementTarget = "MovementTarget";
+
+    /// <summary>
+    /// CalderaSite - the NPC can see infinitely through obstacles.
+    /// </summary>
+    public const string ESP = "ESP";
 
     /// <summary>
     /// Can the NPC click open entities such as doors.
