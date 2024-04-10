@@ -1,6 +1,6 @@
 ﻿# Wave Defense Base Hostile
 - type: entity
-  name: wave attacker chaser
+  name: wave attacker
   abstract: true
   id: N14MobWave
   components:
