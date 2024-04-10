@@ -1,6 +1,6 @@
 ﻿# Wave Defense Base Hostile
 - type: entity
-  name: wave attacker
+  name: wave attacker chaser
   abstract: true
   id: N14MobWave
   components:
@@ -32,3 +32,11 @@
   components:
   - type: WaveMob
     group: Animals
+
+- type: entity
+  abstract: true
+  id: N14MobWaveXeno
+  parent: N14MobWave
+  components:
+  - type: WaveMob
+    group: Xenos

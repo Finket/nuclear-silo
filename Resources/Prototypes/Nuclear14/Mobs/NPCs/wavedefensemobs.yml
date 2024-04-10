@@ -1,20 +1,238 @@
 ﻿# Wave Defense Mobs
 # Ordered by difficulty
+
 # Animals
 
 - type: entity
-  parent: [ MobAngryBee, N14MobWaveAnimal ]
-  id: MobAngryBeeWave
+  parent: [ MobTick, N14MobWaveAnimal ]
+  id: MobTickWave
   suffix: WaveMode
   components:
   - type: WaveMob
-    difficulty: 1
+    difficulty: 2
 
 - type: entity
-  parent: [ MobGlockroach, N14MobWaveAnimal ]
-  id: MobGlockroachWaveBoss
+  parent: [ MobCobraSpace, N14MobWaveAnimal ]
+  id: MobCobraSpaceWave
   suffix: WaveMode
   components:
   - type: WaveMob
-    difficulty: 3
+    difficulty: 4
+
+- type: entity
+  parent: [ MobKangarooSpace, N14MobWaveAnimal ]
+  id: MobKangarooSpaceWave
+  suffix: WaveMode
+  components:
+  - type: WaveMob
+    difficulty: 6
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+    blackboard:
+      ESP: !type:Bool
+        false
+      VisionRadius: !type:Single
+        10.0
+      IdleRange: !type:Single
+        50.0
+
+- type: entity
+  parent: [ MobBearSpace, N14MobWaveAnimal ]
+  id: MobBearSpaceWaveBoss
+  suffix: WaveMode
+  components:
+  - type: WaveMob
+    difficulty: 6
     unique: true
+
+- type: entity
+  parent: [ MobSpiderSpace, N14MobWaveAnimal ]
+  id: MobSpiderSpaceWave
+  suffix: WaveMode
+  components:
+  - type: WaveMob
+    difficulty: 8
+
+- type: entity
+  parent: [ MobBearSpace, N14MobWaveAnimal ]
+  id: MobBearSpaceWave
+  suffix: WaveMode
+  components:
+  - type: WaveMob
+    difficulty: 14
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+    blackboard:
+      ESP: !type:Bool
+        false
+      VisionRadius: !type:Single
+        10.0
+      IdleRange: !type:Single
+        50.0
+
+
+# Xenos
+
+- type: entity
+  parent: [ MobXenoDroneNPC, N14MobWaveAnimal ]
+  id: MobXenoDroneNPCWaveBoss
+  suffix: WaveMode
+  components:
+  - type: WaveMob
+    difficulty: 8
+    unique: true
+
+- type: entity
+  parent: [ MobXenoRounyNPC, N14MobWaveXeno ]
+  id: MobXenoRounyNPCWave # 50
+  suffix: WaveMode
+  components:
+  - type: WaveMob
+    difficulty: 10
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+    blackboard:
+      ESP: !type:Bool
+        false
+      VisionRadius: !type:Single
+        20.0
+      IdleRange: !type:Single
+        0.0
+
+- type: entity
+  parent: [ MobXenoRunnerNPC, N14MobWaveXeno ]
+  id: MobXenoRunnerNPCWave # 50
+  suffix: WaveMode
+  components:
+  - type: WaveMob
+    difficulty: 10
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+    blackboard:
+      ESP: !type:Bool
+        false
+      VisionRadius: !type:Single
+        10.0
+      IdleRange: !type:Single
+        50.0
+
+- type: entity
+  parent: [ MobXenoSpitterNPC, N14MobWaveXeno ]
+  id: MobXenoSpitterNPCWave # 50
+  suffix: WaveMode
+  components:
+  - type: WaveMob
+    difficulty: 10
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+    blackboard:
+      ESP: !type:Bool
+        false
+      VisionRadius: !type:Single
+        10.0
+      IdleRange: !type:Single
+        50.0
+
+- type: entity
+  parent: [ MobXenoRavagerNPC, N14MobWaveXeno ]
+  id: MobXenoRavagerNPCWaveBoss # 50
+  suffix: WaveMode
+  components:
+  - type: WaveMob
+    difficulty: 12
+    unique: true
+
+- type: entity
+  parent: [ MobXenoPraetorianNPC, N14MobWaveXeno ]
+  id: MobXenoPraetorianNPCWaveBoss # 100
+  suffix: WaveMode
+  components:
+  - type: WaveMob
+    difficulty: 12
+    unique: true
+
+- type: entity
+  parent: [ MobXenoQueenNPC, N14MobWaveXeno ]
+  id: MobXenoQueenNPCWaveBoss # 100
+  suffix: WaveMode
+  components:
+  - type: WaveMob
+    difficulty: 16
+    unique: true
+
+- type: entity
+  parent: [ MobXenoDroneNPC, N14MobWaveXeno ]
+  id: MobXenoDroneNPCWave # 80
+  suffix: WaveMode
+  components:
+  - type: WaveMob
+    difficulty: 18
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+    blackboard:
+      ESP: !type:Bool
+        false
+      VisionRadius: !type:Single
+        10.0
+      IdleRange: !type:Single
+        50.0
+
+- type: entity
+  parent: [ MobXenoRavagerNPC, N14MobWaveXeno ]
+  id: MobXenoRavagerNPCWave # 100
+  suffix: WaveMode
+  components:
+  - type: WaveMob
+    difficulty: 20
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+    blackboard:
+      ESP: !type:Bool
+        false
+      VisionRadius: !type:Single
+        10.0
+      IdleRange: !type:Single
+        50.0
+
+- type: entity
+  parent: [ MobXenoPraetorianNPC, N14MobWaveXeno ]
+  id: MobXenoPraetorianNPCWave # 100
+  suffix: WaveMode
+  components:
+  - type: WaveMob
+    difficulty: 20
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+    blackboard:
+      ESP: !type:Bool
+        false
+      VisionRadius: !type:Single
+        20.0
+      IdleRange: !type:Single
+        0.0
+
+- type: entity
+  parent: [ MobXenoQueenNPC, N14MobWaveXeno ]
+  id: MobXenoQueenNPCWave # 100
+  suffix: WaveMode
+  components:
+  - type: WaveMob
+    difficulty: 30
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+    blackboard:
+      ESP: !type:Bool
+        false
+      VisionRadius: !type:Single
+        10.0
+      IdleRange: !type:Single
+        50.0
